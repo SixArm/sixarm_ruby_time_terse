@@ -4,17 +4,19 @@ require 'simplecov'
 SimpleCov.start
 require 'sixarm_ruby_time_terse'
 
-class TimeTest < Test::Unit::TestCase
+describe Time do
 
- def test_terse_with_class_method
-   t=Time.terse
-   assert(t=~/^\d\d\d\d\d\d\d\d\d\d\d\d\d\d$/,t)
- end
+  describe "#terse" do
+    
+    it "with class method" do
+      Time.terse.must_match /^\d\d\d\d\d\d\d\d\d\d\d\d\d\d$/
+    end
+    
+    it "with instance method" do
+    Time.now.terse.must_match /^\d\d\d\d\d\d\d\d\d\d\d\d\d\d$/
+    end
+    
+  end
 
- def test_terse_with_instance_method
-   t=Time.now.terse
-   assert(t=~/^\d\d\d\d\d\d\d\d\d\d\d\d\d\d$/,t)
- end
- 
 end
 
