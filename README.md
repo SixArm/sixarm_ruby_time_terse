@@ -31,7 +31,6 @@ Require:
 
 ## Examples
 
-    require "sixarm_ruby_time_terse"
     puts Time.terse  #=> "20101231125959"
     puts Time.now.terse  #=> "20101231125959"
 
