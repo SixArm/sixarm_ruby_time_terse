@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> Time.terse method for ISO RFC date and time terse
+# Ruby » <br> Time.terse method for ISO RFC date and time terse
 
 * Doc: <http://sixarm.com/sixarm_ruby_time_terse/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_time_terse>
