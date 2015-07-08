@@ -1,4 +1,7 @@
-# Ruby » <br> Time.terse method for ISO RFC date and time terse
+# SixArm.com » Ruby » <br> Time.terse method for ISO RFC date and time terse
+
+[![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_time_terse.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_time_terse)
+[![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_time_terse.png)](https://travis-ci.org/SixArm/sixarm_ruby_time_terse)
 
 * Doc: <http://sixarm.com/sixarm_ruby_time_terse/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_time_terse>
@@ -23,7 +26,7 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_time_terse", "~>1.1.0"
+    gem "sixarm_ruby_time_terse", ">=1.1.1", "<2"
 
 Require:
 
