@@ -1,1 +1,45 @@
-{"Unit Tests":{"coverage":{"/home/sixarm/git/sixarm_ruby_time_terse/lib/sixarm_ruby_time_terse.rb":[null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,null,1,0,null,null,null,null,null,null,null,null,null,null,null,1,0,null,null,null,null]},"timestamp":1331937081}}
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/joel/git/sixarm/sixarm_ruby_time_terse/lib/sixarm_ruby_time_terse.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1436385742
+  }
+}
