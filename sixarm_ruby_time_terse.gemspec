@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_time_terse"
   s.summary        = "SixArm.com » Ruby » Time.terse method"
   s.description    = "Time.terse method to generate a string formatted with YYYYMMDDHHMMSS"
-  s.version        = "1.1.1"
+  s.version        = "1.1.4"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
@@ -22,10 +22,12 @@ Gem::Specification.new do |s|
   s.files = [
     "Rakefile",
     "lib/sixarm_ruby_time_terse.rb",
+    "lib/sixarm_ruby_time_terse/time.rb",    
   ]
 
   s.test_files = [
     "test/sixarm_ruby_time_terse_test.rb",
+    "test/sixarm_ruby_time_terse_test/time_test.rb",    
   ]
 
   s.add_development_dependency('minitest', '>= 5.7.0', '< 6')
