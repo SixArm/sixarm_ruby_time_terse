@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
 
   s.name           = "sixarm_ruby_time_terse"
-  s.summary        = "SixArm.com » Ruby » Time.terse method"
+  s.summary        = "SixArm.com → Ruby → Time.terse method"
   s.description    = "Time.terse method to generate a string formatted with YYYYMMDDHHMMSS"
   s.version        = "1.1.4"
 
