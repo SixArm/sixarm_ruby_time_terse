@@ -1,6 +1,6 @@
 # SixArm.com → Ruby → <br> Time.terse method for timestamping
 
-<!--HEADER-OPEN-->
+<!--header-open-->
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_time_terse.svg)](http://badge.fury.io/rb/sixarm_ruby_time_terse)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_time_terse.png)](https://travis-ci.org/SixArm/sixarm_ruby_time_terse)
@@ -13,7 +13,7 @@
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
 * Project: [Changes](CHANGES.md), [License](LICENSE.md), [Contributing](CONTRIBUTING.md).
 
-<!--HEADER-SHUT-->
+<!--header-shut-->
 
 
 ## Introduction
@@ -25,7 +25,7 @@ For docs go to <http://sixarm.com/sixarm_ruby_time_terse/doc>
 Want to help? We're happy to get pull requests.
 
 
-<!--INSTALL-OPEN-->
+<!--install-opent-->
 
 ## Install
 
@@ -45,7 +45,7 @@ To require the gem in your code:
 
     require 'sixarm_ruby_time_terse'
 
-<!--INSTALL-SHUT-->
+<!--install-shut-->
 
 
 ## Examples
