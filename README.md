@@ -4,7 +4,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_time_terse.svg)](http://badge.fury.io/rb/sixarm_ruby_time_terse)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_time_terse.png)](https://travis-ci.org/SixArm/sixarm_ruby_time_terse)
-[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/$id/maintainability)](https://codeclimate.com/github/SixArm/$dir/maintainability)
+[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/3957f49740b14e5f09b1/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_time_terse/maintainability)
 [![Coverage Status](https://coveralls.io/repos/SixArm/sixarm_ruby_time_terse/badge.svg?branch=master&service=github)](https://coveralls.io/github/SixArm/sixarm_ruby_time_terse?branch=master)
 
 * Git: <https://github.com/sixarm/sixarm_ruby_time_terse>
