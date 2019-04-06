@@ -6,7 +6,7 @@
 <title>
   Class: Time
   
-    &mdash; Documentation by YARD 0.9.14
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -128,7 +128,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#terse-class_method" title="terse (class method)">.<strong>terse</strong>  &#x21d2; Object </a>
+      <a href="#terse-class_method" title="terse (class method)">.<strong>terse</strong>(format = self.terse_format)  &#x21d2; Object </a>
     
 
     
@@ -143,7 +143,79 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The time now, in UTC, using a terse format “YYYYMMDDHHMMSS”.</p>
+<p>Shorthand for Time.now.terse.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#terse_format-class_method" title="terse_format (class method)">.<strong>terse_format</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get class-scope terse format string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#terse_format=-class_method" title="terse_format= (class method)">.<strong>terse_format=</strong>(format)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Set class-scope terse format string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#terse_format_default-class_method" title="terse_format_default (class method)">.<strong>terse_format_default</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get class-scope terse format default string.</p>
 </div></span>
   
 </li>
@@ -161,7 +233,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#terse-instance_method" title="#terse (instance method)">#<strong>terse</strong>  &#x21d2; Object </a>
+      <a href="#terse-instance_method" title="#terse (instance method)">#<strong>terse</strong>(format = terse_format)  &#x21d2; Object </a>
     
 
     
@@ -176,7 +248,55 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The time, in UTC, using a terse format “YYYYMMDDHHMMSS”.</p>
+<p>Create a time terse string using the default format “YYYYMMDDTHHMMSSNNNNNNNNN”.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#terse_format-instance_method" title="#terse_format (instance method)">#<strong>terse_format</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get terse format string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#terse_format=-instance_method" title="#terse_format= (instance method)">#<strong>terse_format=</strong>(format)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Set terse format string.</p>
 </div></span>
   
 </li>
@@ -194,7 +314,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="terse-class_method">
   
-    .<strong>terse</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>terse</strong>(format = self.terse_format)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -203,18 +323,15 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The time now, in UTC, using a terse format “YYYYMMDDHHMMSS”.</p>
+<p>Shorthand for Time.now.terse</p>
 
 <p>Example:</p>
 
 <pre class="code ruby"><code class="ruby">Time.terse
-=&gt; &quot;20151231125959&quot;
+=&gt; &quot;20201231125959000000000&quot;
 </code></pre>
 
-<p>Return:</p>
-
-<pre class="code ruby"><code class="ruby">* [String] Time.now formatted as &quot;YYYYMMDDHHMMSS&quot;
-</code></pre>
+<p>Return: [String] Time.now time terse string</p>
 
 
   </div>
@@ -228,15 +345,159 @@
       <pre class="lines">
 
 
-34
 35
-36</pre>
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_terse'>terse</span>
-  <span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_terse'>terse</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_terse'>terse</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_terse_format'>terse_format</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_terse'>terse</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="terse_format-class_method">
+  
+    .<strong>terse_format</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get class-scope terse format string</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">Time.terse_format =&gt; &quot;%Y%m%d%H%M%S%N&quot;
+</code></pre>
+
+<p>Return: [String] terse format string</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_terse_format'>terse_format</span>
+  <span class='cvar'>@@terse_format</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%Y%m%d%H%M%S%N</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="terse_format=-class_method">
+  
+    .<strong>terse_format=</strong>(format)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Set class-scope terse format string</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_terse_format'><span class='object_link'><a href="#terse_format-class_method" title="Time.terse_format (method)">terse_format</a></span></span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y%m%d%H%M%S%N</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+<p>Return: [String] terse format string</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_terse_format='>terse_format=</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+  <span class='cvar'>@@terse_format</span> <span class='op'>=</span> <span class='id identifier rubyid_format'>format</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="terse_format_default-class_method">
+  
+    .<strong>terse_format_default</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get class-scope terse format default string</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">Time.terse_format_default =&gt; &quot;%Y%m%d%H%M%S%N&quot;
+</code></pre>
+
+<p>Return: [String] terse format default string</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_terse_format_default'>terse_format_default</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y%m%d%H%M%S%N</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -252,7 +513,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="terse-instance_method">
   
-    #<strong>terse</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>terse</strong>(format = terse_format)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -261,17 +522,118 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The time, in UTC, using a terse format “YYYYMMDDHHMMSS”.</p>
+<p>Create a time terse string using the default format “YYYYMMDDTHHMMSSNNNNNNNNN”</p>
+
+<p>This standard format is specified in IETF RFC 3339 and ISO 8601.</p>
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby">Time.now.terse 
-=&gt; &quot;20151231125959&quot;
+<pre class="code ruby"><code class="ruby">time = Time.now
+time.terse
+=&gt; &quot;20201231125959000000000&quot;
 </code></pre>
 
-<p>Return:</p>
+<p>Return: [String] a time terse string</p>
 
-<pre class="code ruby"><code class="ruby">* [String] time formatted as &quot;YYYYMMDDHHMMSS&quot;
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://www.ietf.org/rfc/rfc3339.txt" target="_parent" title="http://www.ietf.org/rfc/rfc3339.txt">http://www.ietf.org/rfc/rfc3339.txt</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_terse'>terse</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span> <span class='op'>=</span> <span class='id identifier rubyid_terse_format'>terse_format</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_getutc'>getutc</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="terse_format-instance_method">
+  
+    #<strong>terse_format</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get terse format string</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">time.terse_format =&gt; &quot;%Y%m%d%H%M%S%N&quot;
+</code></pre>
+
+<p>Return: [String] terse format string</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_terse_format'>terse_format</span>
+  <span class='ivar'>@terse_format</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%Y%m%d%H%M%S%N</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="terse_format=-instance_method">
+  
+    #<strong>terse_format=</strong>(format)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Set terse format string</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_time'>time</span><span class='period'>.</span><span class='id identifier rubyid_terse_format'>terse_format</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y%m%d%H%M%S%N</span><span class='tstring_end'>&quot;</span></span>
 </code></pre>
 
 
@@ -286,15 +648,15 @@
       <pre class="lines">
 
 
-19
-20
-21</pre>
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_time_terse/time.rb', line 57</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_terse'>terse</span>
-  <span class='id identifier rubyid_getutc'>getutc</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%Y%m%d%H%M%S</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_terse_format='>terse_format=</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+  <span class='ivar'>@terse_format</span> <span class='op'>=</span> <span class='id identifier rubyid_format'>format</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -306,9 +668,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jun 22 01:08:21 2018 by
+  Generated on Fri Apr  5 18:32:49 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.14 (ruby-2.5.1).
+  0.9.19 (ruby-2.5.1).
 </div>
 
     </div>

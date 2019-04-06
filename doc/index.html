@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.14
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -63,10 +63,10 @@
 
 <p><a href="http://badge.fury.io/rb/sixarm_ruby_time_terse"><img src="https://badge.fury.io/rb/sixarm_ruby_time_terse.svg" alt="Gem Version"></a>
 <a href="https://travis-ci.org/SixArm/sixarm_ruby_time_terse"><img src="https://travis-ci.org/SixArm/sixarm_ruby_time_terse.png" alt="Build Status"></a>
-<a href="https://codeclimate.com/github/SixArm/sixarm_ruby_time_terse/maintainability"><img src="https://api.codeclimate.com/v1/badges/3957f49740b14e5f09b1/maintainability" alt="Code Climate Maintainability"></a></p>
+<a href="https://codeclimate.com/github/SixArm/sixarm_ruby_time_terse/maintainability"><img src="https://api.codeclimate.com/v1/badges/3957f49740b14e5f09b1/maintainability" alt="Code Climate"></a></p>
 
 <ul>
-<li>Git: <a href="https://github.com/sixarm/sixarm_ruby_time_terse">https://github.com/sixarm/sixarm_ruby_time_terse</a></li>
+<li>Git: <a href="https://github.com/SixArm/sixarm_ruby_time_terse">https://github.com/SixArm/sixarm_ruby_time_terse</a></li>
 <li>Doc: <a href="http://sixarm.com/sixarm_ruby_time_terse/doc">http://sixarm.com/sixarm_ruby_time_terse/doc</a></li>
 <li>Gem: <a href="https://rubygems.org/gems/sixarm_ruby_time_terse">https://rubygems.org/gems/sixarm_ruby_time_terse</a></li>
 <li>Contact: Joel Parker Henderson, <a href="mailto:joel@sixarm.com">joel@sixarm.com</a></li>
@@ -89,12 +89,14 @@
 
 <h3>Gem</h3>
 
-<p>Run this command in your shell or terminal:</p>
+<p>To install this gem in your shell or terminal:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_sixarm_ruby_time_terse'>sixarm_ruby_time_terse</span>
 </code></pre>
 
-<p>Or add this to your Gemfile:</p>
+<h3>Gemfile</h3>
+
+<p>To add this gem to your Gemfile:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sixarm_ruby_time_terse</span><span class='tstring_end'>&#39;</span></span>
 </code></pre>
@@ -110,15 +112,39 @@
 
 <h2>Examples</h2>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_puts'>puts</span> <span class='const'><span class='object_link'><a href="Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_terse'><span class='object_link'><a href="Time.html#terse-class_method" title="Time.terse (method)">terse</a></span></span>  <span class='comment'>#=&gt; &quot;20101231125959&quot;
-</span><span class='id identifier rubyid_puts'>puts</span> <span class='const'><span class='object_link'><a href="Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_terse'>terse</span>  <span class='comment'>#=&gt; &quot;20101231125959&quot;
+<p>Generate a time terse string using the defaults:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_terse'><span class='object_link'><a href="Time.html#terse-class_method" title="Time.terse (method)">terse</a></span></span>  <span class='comment'>#=&gt; &quot;20201231125959000000000&quot;
+</span></code></pre>
+
+<p>Defaults:</p>
+
+<ul>
+<li><p>The current time</p></li>
+<li><p>The UTC time zone a.k.a. Zulu time zone a.k.a. &quot;Z&quot; time zome.</p></li>
+<li><p>Terse format: &quot;%Y%m%d%H%M%S%N&quot;</p></li>
+<li><p>Nanosecond precision</p></li>
+</ul>
+
+<p>Set a different format:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_terse_format'><span class='object_link'><a href="Time.html#terse_format-class_method" title="Time.terse_format (method)">terse_format</a></span></span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%M%D%H%M</span><span class='tstring_end'>&quot;</span></span>
+<span class='const'><span class='object_link'><a href="Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_terse'><span class='object_link'><a href="Time.html#terse-class_method" title="Time.terse (method)">terse</a></span></span> <span class='comment'>#=&gt; &quot;12311259&quot;
+</span></code></pre>
+
+<p>The same methods are also available for an instance:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Time.html" title="Time (class)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+<span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_terse'>terse</span> <span class='comment'>#=&gt; &quot;20201231125959000000000&quot;
+</span><span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_terse_format'>terse_format</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%M%D%H%M</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_terse'>terse</span> <span class='comment'>#=&gt; &quot;12311259&quot;
 </span></code></pre>
 </div></div>
 
       <div id="footer">
-  Generated on Fri Jun 22 01:08:21 2018 by
+  Generated on Fri Apr  5 18:32:49 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.14 (ruby-2.5.1).
+  0.9.19 (ruby-2.5.1).
 </div>
 
     </div>

@@ -4,35 +4,94 @@ Time class extensions.
 =end
 
 class Time
-
-  # The time, in UTC, using a terse format "YYYYMMDDHHMMSS".
+  
+  # Create a time terse string using the default format "YYYYMMDDTHHMMSSNNNNNNNNN"
+  #
+  # This standard format is specified in IETF RFC 3339 and ISO 8601.
+  #
+  # @see http://www.ietf.org/rfc/rfc3339.txt
   #
   # Example:
   #
-  #     Time.now.terse 
-  #     => "20151231125959"
+  #     time = Time.now
+  #     time.terse
+  #     => "20201231125959000000000"
   #
-  # Return:
+  # Return: [String] a time terse string
   #
-  #  * [String] time formatted as "YYYYMMDDHHMMSS"
-  #
-  def terse
-    getutc.strftime('%Y%m%d%H%M%S')
+  def terse(format = terse_format)
+    getutc.strftime(format)
   end
 
-  # The time now, in UTC, using a terse format "YYYYMMDDHHMMSS".
+  # Shorthand for Time.now.terse
   #
   # Example:
   #
   #     Time.terse
-  #     => "20151231125959" 
+  #     => "20201231125959000000000"
   #
-  # Return:
+  # Return: [String] Time.now time terse string
   #
-  #  * [String] Time.now formatted as "YYYYMMDDHHMMSS"
+  def self.terse(format = self.terse_format)
+    now.terse(format)
+  end
+
+  # Get terse format string
   #
-  def self.terse
-    now.terse
+  # Example:
+  #
+  #     time.terse_format => "%Y%m%d%H%M%S%N"
+  #
+  # Return: [String] terse format string
+  #
+  def terse_format
+    @terse_format ||= '%Y%m%d%H%M%S%N'
+  end
+
+  # Set terse format string
+  #
+  # Example:
+  #
+  #     time.terse_format = "%Y%m%d%H%M%S%N"
+  #
+  def terse_format=(format)
+    @terse_format = format
+  end
+
+  # Get class-scope terse format string
+  #
+  # Example:
+  #
+  #     Time.terse_format => "%Y%m%d%H%M%S%N"
+  #
+  # Return: [String] terse format string
+  #
+  def self.terse_format
+    @@terse_format ||= '%Y%m%d%H%M%S%N'
+  end
+
+  # Set class-scope terse format string
+  #
+  # Example:
+  #
+  #     Time.terse_format = "%Y%m%d%H%M%S%N"
+  #
+  # Return: [String] terse format string
+  #
+  def self.terse_format=(format)
+    @@terse_format = format
+  end
+
+  # Get class-scope terse format default string
+  #
+  # Example:
+  #
+  #     Time.terse_format_default => "%Y%m%d%H%M%S%N"
+  #
+  # Return: [String] terse format default string
+  #
+  def self.terse_format_default
+    "%Y%m%d%H%M%S%N"
   end
 
 end
